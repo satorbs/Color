@@ -169,12 +169,10 @@ function clamp(v, max) {
  * @param str, object can be in any of these: 'red', '#0099ff', 'rgb(64, 128, 255)', 'rgba(64, 128, 255, 0.5)', { r:0.2, g:0.3, b:0.9, a:1 }
  */
 var Color = function(r, g, b, a) {
-  var defaultColor = 0;
-  var defaultAlpha = 1;
-  this.r = clamp(r, 1) || defaultColor;
-  this.g = clamp(g, 1) || defaultColor;
-  this.b = clamp(b, 1) || defaultColor;
-  this.a = clamp(a, 1) || defaultAlpha;
+  this.r = clamp(r, 1) || 0.83;
+  this.g = clamp(g, 1) || 0.83;
+  this.b = clamp(b, 1) || 0.83;
+  this.a = clamp(a, 1) || 1;
 };
 
 /**
